@@ -9,7 +9,7 @@ const streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: API_KEY
+    accessToken: secrets.API_KEY
 });
 
 const outdoors = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -18,7 +18,7 @@ const outdoors = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x
     id: 'mapbox/outdoors-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: API_KEY
+    accessToken: secrets.API_KEY
 });
 
 const satellite = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -27,7 +27,7 @@ const satellite = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{
     id: 'mapbox/satellite-v9',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: API_KEY
+    accessToken: secrets.API_KEY
 });
 
 const baseMaps = {
