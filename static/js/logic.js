@@ -1,4 +1,4 @@
-await octokit.request('GET /orgs/{org}/actions/secrets/{API_KEY}', {
+await octokit.request('GET actions/secrets/{API_KEY}', {
   org: 'org',
   secret_name: 'API_KEY'
 })
