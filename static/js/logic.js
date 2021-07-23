@@ -1,7 +1,9 @@
-await octokit.request('GET actions/secrets/{API_KEY}', {
-  org: 'org',
-  secret_name: 'API_KEY'
-})
+steps:
+  - shell: bash
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+    run: |
+      example-command "$API_KEY"
 
 
 
