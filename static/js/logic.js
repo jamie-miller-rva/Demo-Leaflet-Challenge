@@ -1,4 +1,7 @@
-
+await octokit.request('GET /orgs/{org}/actions/secrets/{API_KEY}', {
+  org: 'org',
+  secret_name: 'API_KEY'
+})
 
 
 
@@ -9,7 +12,7 @@ const streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: secrets.API_KEY
+    accessToken: API_KEY
 });
 
 const outdoors = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -18,7 +21,7 @@ const outdoors = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x
     id: 'mapbox/outdoors-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: secrets.API_KEY
+    accessToken: API_KEY
 });
 
 const satellite = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -27,7 +30,7 @@ const satellite = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{
     id: 'mapbox/satellite-v9',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: secrets.API_KEY
+    accessToken: API_KEY
 });
 
 const baseMaps = {
